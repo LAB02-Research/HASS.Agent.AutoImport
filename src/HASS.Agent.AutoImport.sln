@@ -8,19 +8,25 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FF6C1526-A450-4879-A987-D322F5E23F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF6C1526-A450-4879-A987-D322F5E23F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6C1526-A450-4879-A987-D322F5E23F9A}.Debug|x64.ActiveCfg = Debug|x64
+		{FF6C1526-A450-4879-A987-D322F5E23F9A}.Debug|x64.Build.0 = Debug|x64
 		{FF6C1526-A450-4879-A987-D322F5E23F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF6C1526-A450-4879-A987-D322F5E23F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6C1526-A450-4879-A987-D322F5E23F9A}.Release|x64.ActiveCfg = Release|x64
+		{FF6C1526-A450-4879-A987-D322F5E23F9A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VisualSVNWorkingCopyRoot = .
 		SolutionGuid = {1B6D3ECD-2A0D-498C-8868-D6235629FAD0}
+		VisualSVNWorkingCopyRoot = .
 	EndGlobalSection
 EndGlobal

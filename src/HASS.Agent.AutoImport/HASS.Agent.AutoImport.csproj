@@ -9,6 +9,7 @@
     <Authors>LAB02 Research</Authors>
     <Company>LAB02 Research</Company>
     <ApplicationIcon>hassagent.ico</ApplicationIcon>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
