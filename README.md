@@ -24,3 +24,9 @@ Configuration is done through `appsettings.json` in the `config` subfolder:
 `RestartHASSAgentOnNewItems`: set to `true` to restart HASS.Agent after new .lnk files are found. This is required to have the new entities registered.
 
 ----
+
+Uses [securifybv.ShellLink](https://github.com/securifybv/ShellLink) to parse the .lnk files ❤️
+
+----
+
+Everything on the HASS.Agent platform is released under the [MIT license](https://opensource.org/licenses/MIT).
