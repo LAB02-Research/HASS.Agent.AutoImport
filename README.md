@@ -31,7 +31,9 @@ Create a `CustomCommand` for every shortcut found.
 
 #### Option `CreateProcessActiveSensors`
 
-Create a `ProcessActive` sensor for every shortcut found. Note that this might require tweaking the process.
+Create a `ProcessActive` sensor for every shortcut found. 
+
+**Note**: _This is best effort, might require tweaking the process in HASS.Agent. Won't work for Steam urls._
 
 #### Option `RestartHASSAgentOnNewItems`
 
