@@ -27,6 +27,8 @@ Configuration is done through `appsettings.json` in the `config` subfolder:
 
 Uses [securifybv.ShellLink](https://github.com/securifybv/ShellLink) to parse the .lnk files ❤️
 
+Requires .NET 6, download the redistributables [here](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-6.0.12-windows-x64-installer).
+
 ----
 
 Everything on the HASS.Agent platform is released under the [MIT license](https://opensource.org/licenses/MIT).
