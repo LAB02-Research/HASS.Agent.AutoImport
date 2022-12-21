@@ -9,19 +9,35 @@ Use this to easily have all your games or applications added as buttons to [Home
 
 ----
 
-Configuration is done through `appsettings.json` in the `config` subfolder:
+### Options
 
-`HASSAgentInstallPath`: local root path for HASS.Agent. If left empty, it'll use the default.
+Configuration is done through `appsettings.json` in the `config` subfolder. If it's not found, it'll be created on first launch.
 
-`ShortcutSourceFolder`: where to look for your .lnk and .url files.
+#### Option `HASSAgentInstallPath` (optional)
 
-`ShortcutSearchRecusively`: set to `true` to search through subdirectories as well.
+Local root path for HASS.Agent. If left empty, it'll use the default.
 
-`CreateCustomCommands`: create a `CustomCommand` for every shortcut found.
+#### Option `ShortcutSourceFolder`
 
-`CreateProcessActiveSensors`: create a `ProcessActive` sensor for every shortcut found. Note that this might require tweaking the process.
+Where to look for your .lnk and .url files.
 
-`RestartHASSAgentOnNewItems`: set to `true` to restart HASS.Agent after new shortcuts are found. This is required to have the new entities registered.
+#### Option `ShortcutSearchRecusively`
+
+Set to `true` to search through subdirectories as well.
+
+#### Option `CreateCustomCommands`
+
+Create a `CustomCommand` for every shortcut found.
+
+#### Option `CreateProcessActiveSensors`
+
+Create a `ProcessActive` sensor for every shortcut found. Note that this might require tweaking the process.
+
+#### Option `RestartHASSAgentOnNewItems`
+
+Set to `true` to restart HASS.Agent after new shortcuts are found. 
+
+**Note**: _Restarting HASS.Agent is required to have the new entities registered._
 
 ----
 
