@@ -68,7 +68,7 @@ namespace HASS.Agent.AutoImport.Functions
             }
             catch (Exception ex)
             {
-                Log.Fatal(ex, "[PROCESS] [{process}] Error while determining if process is running: {msg}", process, ex.Message);
+                Log.Fatal(ex, "[PROCESS] [{process}] Error while determining if process is running: {err}", process, ex.Message);
                 return false;
             }
         }
@@ -110,8 +110,45 @@ namespace HASS.Agent.AutoImport.Functions
             }
             catch (Exception ex)
             {
-                Log.Fatal(ex, "[PROCESS] [{process}] Error while closing process: {msg}", process, ex.Message);
+                Log.Fatal(ex, "[PROCESS] [{process}] Error while closing process: {err}", process, ex.Message);
                 return false;
+            }
+        }
+
+        /// <summary>
+        /// Attempts to parse the URL section of an .url file
+        /// </summary>
+        /// <param name="urlFile"></param>
+        /// <returns></returns>
+        internal static (bool parsed, string url) ParseUrl(string urlFile)
+        {
+            try
+            {
+                if (!File.Exists(urlFile))
+                {
+                    Log.Error("[SHORTCUTS] Unable to parse, file not found");
+                    return (false, string.Empty);
+                }
+
+                var lnkFile = File.ReadAllLines(urlFile);
+
+                var parsed = false;
+                var url = string.Empty;
+
+                foreach (var line in lnkFile)
+                {
+                    if (!line.StartsWith("URL=")) continue;
+
+                    url = line.Split('=')[1].Trim();
+                    parsed = true;
+                }
+
+                return (parsed, url);
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "[SHORTCUTS] Error while parsing: {err}", ex.Message);
+                return (false, string.Empty);
             }
         }
     }

@@ -43,7 +43,7 @@ namespace HASS.Agent.AutoImport.Managers
                 }
 
                 // attempt to parse
-                var settings = JsonConvert.DeserializeObject<AppSettings>(settingsStr);
+                var settings = JsonConvert.DeserializeObject<AppSettings>(settingsStr.AddBackslashEscaping());
                 if (settings == null) return (false, "unable to parse settings file");
 
                 // check if the ShortcutSourceFolder exists
@@ -114,7 +114,7 @@ namespace HASS.Agent.AutoImport.Managers
                 }
 
                 // attempt to parse
-                var shortcuts = JsonConvert.DeserializeObject<List<ProcessedShortcut>>(shortcutsStr);
+                var shortcuts = JsonConvert.DeserializeObject<List<ProcessedShortcut>>(shortcutsStr.AddBackslashEscaping());
                 if (shortcuts == null) return (false, "unable to parse processedshortcuts file");
 
                 // done
@@ -136,8 +136,11 @@ namespace HASS.Agent.AutoImport.Managers
             // create the settings dir
             if (!Directory.Exists(Variables.SettingsPath)) Directory.CreateDirectory(Variables.SettingsPath);
 
+            // serialize the settings
+            var serializedSettings = JsonConvert.SerializeObject(Variables.Settings, Formatting.Indented).RemoveBackslashEscaping();
+
             // write the config
-            File.WriteAllText(Variables.AppSettingsFile, JsonConvert.SerializeObject(Variables.Settings, Formatting.Indented));
+            File.WriteAllText(Variables.AppSettingsFile, serializedSettings);
         }
     }
 }

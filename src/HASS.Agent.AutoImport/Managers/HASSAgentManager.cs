@@ -274,6 +274,7 @@ namespace HASS.Agent.AutoImport.Managers
                     // wait a bit
                     Thread.Sleep(TimeSpan.FromSeconds(2));
                 }
+                else Log.Information("[HASS.Agent] Not currently running, no need to close");
 
                 // relaunch
                 Log.Information("[HASS.Agent] Starting new instance ..");

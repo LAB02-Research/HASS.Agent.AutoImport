@@ -19,7 +19,7 @@ namespace HASS.Agent.AutoImport.Models
         public string ShortcutSourceFolder { get; set; } = string.Empty;
         public bool ShortcutSearchRecusively { get; set; } = false;
         public bool CreateCustomCommands { get; set; } = true;
-        public bool CreateProcessActiveSensors { get; set; } = true;
+        public bool CreateProcessActiveSensors { get; set; } = false;
         public bool RestartHASSAgentOnNewItems { get; set; } = true;
     }
 }
