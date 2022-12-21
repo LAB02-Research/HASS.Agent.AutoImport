@@ -11,7 +11,7 @@ Use this to easily have all your games or applications added as buttons to [Home
 
 ### Options
 
-Configuration is done through `appsettings.json` in the `config` subfolder. If it's not found, it'll be created on first launch.
+Configuration is done through `appsettings.json` in the `config` subfolder. If it's not found, it'll be created on launch.
 
 #### Option `HASSAgentInstallPath` (optional)
 
