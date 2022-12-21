@@ -3,7 +3,7 @@
 
 # HASS.Agent AutoImport
 
-This small console application will automatically import all .lnk (shortcut) files in a directory and create commands and/or sensors for them in [HASS.Agent](https://github.com/LAB02-Research/HASS.Agent).
+This small console application will automatically import all .lnk and .url (shortcut) files in a directory and create commands and/or sensors for them in [HASS.Agent](https://github.com/LAB02-Research/HASS.Agent).
 
 Use this to easily have all your games or applications added as buttons to [Home Assistant](https://www.home-assistant.io).
 
@@ -13,7 +13,7 @@ Configuration is done through `appsettings.json` in the `config` subfolder:
 
 `HASSAgentInstallPath`: local root path for HASS.Agent. If left empty, it'll use the default.
 
-`ShortcutSourceFolder`: where to look for your .lnk files.
+`ShortcutSourceFolder`: where to look for your .lnk and .url files.
 
 `ShortcutSearchRecusively`: set to `true` to search through subdirectories as well.
 
