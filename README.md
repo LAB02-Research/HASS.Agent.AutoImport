@@ -17,11 +17,11 @@ Configuration is done through `appsettings.json` in the `config` subfolder:
 
 `ShortcutSearchRecusively`: set to `true` to search through subdirectories as well.
 
-`CreateCustomCommands`: create a `CustomCommand` for every .lnk file found.
+`CreateCustomCommands`: create a `CustomCommand` for every shortcut found.
 
-`CreateProcessActiveSensors`: create a `ProcessActive` sensor for every .lnk file found. Note that this might require tweaking the process.
+`CreateProcessActiveSensors`: create a `ProcessActive` sensor for every shortcut found. Note that this might require tweaking the process.
 
-`RestartHASSAgentOnNewItems`: set to `true` to restart HASS.Agent after new .lnk files are found. This is required to have the new entities registered.
+`RestartHASSAgentOnNewItems`: set to `true` to restart HASS.Agent after new shortcuts are found. This is required to have the new entities registered.
 
 ----
 
