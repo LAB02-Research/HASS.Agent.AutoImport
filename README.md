@@ -7,6 +7,8 @@ This small console application will automatically import all .lnk and .url (shor
 
 Use this to easily have all your games or applications added as buttons to [Home Assistant](https://www.home-assistant.io).
 
+Click [here](https://github.com/LAB02-Research/HASS.Agent.AutoImport/releases/latest/download/HASS.Agent.AutoImport.zip) to download the latest release.
+
 ----
 
 ### Options
